@@ -1,0 +1,130 @@
+# vsim -c top "+UVM_TESTNAME=dma_regression_test" "+UVM_VERBOSITY=UVM_MEDIUM" -coverage -l simulation.log -do "coverage save -onexit -assert -directive -cvg -codeAll coverage.ucdb; run -all; exit" 
+# Start time: 16:27:13 on Jan 23,2026
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# //  Questa Sim
+# //  Version 10.6c linux Jul 25 2017
+# //
+# //  Copyright 1991-2017 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.dma_interface(fast)
+# Loading mtiUvm.uvm_pkg
+# Loading work.dma_pkg(fast)
+# Loading work.testbench_sv_unit(fast)
+# Loading work.top(fast)
+# Loading work.dma_interface(fast)
+# Loading work.dma_design(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading /tools/mentor/questasim_10.6c/questasim/uvm-1.1d/linux/uvm_dpi.so
+# coverage save -onexit -assert -directive -cvg -codeAll coverage.ucdb
+#  run -all
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(215) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(217) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# UVM_INFO @ 0: reporter [RNTST] Running test dma_regression_test...
+# UVM_INFO dma_driver.sv(31) @ 25000: uvm_test_top.env.dma_agnt.driver [DRV] REQ received: wr_en=0 rd_en=1 addr=0x00000400 wdata=0x00000000
+# UVM_INFO dma_monitor.sv(49) @ 35000: uvm_test_top.env.dma_agnt.monitor [MON] READ observed: addr=0x00000400 rdata=0x00000000
+# UVM_INFO dma_driver.sv(31) @ 35000: uvm_test_top.env.dma_agnt.driver [DRV] REQ received: wr_en=1 rd_en=0 addr=0x00000400 wdata=0xa5a50000
+# UVM_INFO dma_monitor.sv(34) @ 55000: uvm_test_top.env.dma_agnt.monitor [MON] WRITE observed: addr=0x00000400 wdata=0xa5a50000
+# UVM_INFO dma_driver.sv(31) @ 55000: uvm_test_top.env.dma_agnt.driver [DRV] REQ received: wr_en=0 rd_en=1 addr=0x00000400 wdata=0x00000000
+# UVM_INFO dma_monitor.sv(49) @ 75000: uvm_test_top.env.dma_agnt.monitor [MON] READ observed: addr=0x00000400 rdata=0xa5a50000
+# UVM_INFO dma_reg_seq.sv(34) @ 75000: uvm_test_top.env.dma_agnt.sequencer@@intr_seq [INTR_REG] DES=0xa5a50000 MIRROR=0xa5a50000 READ=0xa5a50000
+# UVM_INFO dma_driver.sv(31) @ 75000: uvm_test_top.env.dma_agnt.driver [DRV] REQ received: wr_en=1 rd_en=0 addr=0x00000404 wdata=0x00010015
+# UVM_INFO dma_monitor.sv(34) @ 95000: uvm_test_top.env.dma_agnt.monitor [MON] WRITE observed: addr=0x00000404 wdata=0x00010015
+# UVM_INFO dma_driver.sv(31) @ 105000: uvm_test_top.env.dma_agnt.driver [DRV] REQ received: wr_en=0 rd_en=1 addr=0x00000404 wdata=0x00000000
+# UVM_INFO dma_monitor.sv(49) @ 115000: uvm_test_top.env.dma_agnt.monitor [MON] READ observed: addr=0x00000404 rdata=0x00010014
+# UVM_INFO dma_reg_seq.sv(76) @ 115000: uvm_test_top.env.dma_agnt.sequencer@@ctrl_seq [CTRL_REG] DES=0x00010014 MIRROR=0x00010014 READ=0x00010014
+# UVM_INFO dma_driver.sv(31) @ 115000: uvm_test_top.env.dma_agnt.driver [DRV] REQ received: wr_en=1 rd_en=0 addr=0x00000408 wdata=0xaaaaaaaa
+# UVM_INFO dma_monitor.sv(34) @ 135000: uvm_test_top.env.dma_agnt.monitor [MON] WRITE observed: addr=0x00000408 wdata=0xaaaaaaaa
+# UVM_INFO dma_driver.sv(31) @ 135000: uvm_test_top.env.dma_agnt.driver [DRV] REQ received: wr_en=0 rd_en=1 addr=0x00000408 wdata=0x00000000
+# UVM_INFO dma_monitor.sv(49) @ 155000: uvm_test_top.env.dma_agnt.monitor [MON] READ observed: addr=0x00000408 rdata=0xaaaaaaaa
+# UVM_INFO dma_reg_seq.sv(118) @ 155000: uvm_test_top.env.dma_agnt.sequencer@@io_seq [IO_ADDR_REG] DES=0xaaaaaaaa MIRROR=0xaaaaaaaa READ=0xaaaaaaaa
+# UVM_INFO dma_driver.sv(31) @ 155000: uvm_test_top.env.dma_agnt.driver [DRV] REQ received: wr_en=1 rd_en=0 addr=0x0000040c wdata=0xbbbbbbbb
+# UVM_INFO dma_monitor.sv(34) @ 175000: uvm_test_top.env.dma_agnt.monitor [MON] WRITE observed: addr=0x0000040c wdata=0xbbbbbbbb
+# UVM_INFO dma_driver.sv(31) @ 175000: uvm_test_top.env.dma_agnt.driver [DRV] REQ received: wr_en=0 rd_en=1 addr=0x0000040c wdata=0x00000000
+# UVM_INFO dma_monitor.sv(49) @ 195000: uvm_test_top.env.dma_agnt.monitor [MON] READ observed: addr=0x0000040c rdata=0xbbbbbbbb
+# UVM_INFO dma_reg_seq.sv(154) @ 195000: uvm_test_top.env.dma_agnt.sequencer@@mem_seq [MEM_ADDR_REG] DES=0xbbbbbbbb MIRROR=0xbbbbbbbb READ=0xbbbbbbbb
+# UVM_INFO dma_driver.sv(31) @ 195000: uvm_test_top.env.dma_agnt.driver [DRV] REQ received: wr_en=1 rd_en=0 addr=0x00000410 wdata=0x12345678
+# UVM_INFO dma_monitor.sv(34) @ 215000: uvm_test_top.env.dma_agnt.monitor [MON] WRITE observed: addr=0x00000410 wdata=0x12345678
+# UVM_INFO dma_driver.sv(31) @ 215000: uvm_test_top.env.dma_agnt.driver [DRV] REQ received: wr_en=0 rd_en=1 addr=0x00000410 wdata=0x00000000
+# UVM_INFO dma_monitor.sv(49) @ 235000: uvm_test_top.env.dma_agnt.monitor [MON] READ observed: addr=0x00000410 rdata=0x12345678
+# UVM_INFO dma_reg_seq.sv(190) @ 235000: uvm_test_top.env.dma_agnt.sequencer@@extra_seq [EXTRA_INFO_REG] DES=0x12345678 MIRROR=0x12345678 READ=0x12345678
+# UVM_INFO dma_driver.sv(31) @ 235000: uvm_test_top.env.dma_agnt.driver [DRV] REQ received: wr_en=0 rd_en=1 addr=0x00000414 wdata=0x00000000
+# UVM_INFO dma_monitor.sv(49) @ 255000: uvm_test_top.env.dma_agnt.monitor [MON] READ observed: addr=0x00000414 rdata=0x00005002
+# UVM_INFO dma_reg_seq.sv(220) @ 255000: uvm_test_top.env.dma_agnt.sequencer@@status_seq [STATUS_REG] READ=0x00005002
+# UVM_INFO dma_driver.sv(31) @ 255000: uvm_test_top.env.dma_agnt.driver [DRV] REQ received: wr_en=0 rd_en=1 addr=0x00000418 wdata=0x00000000
+# UVM_INFO dma_monitor.sv(49) @ 275000: uvm_test_top.env.dma_agnt.monitor [MON] READ observed: addr=0x00000418 rdata=0x0000000b
+# UVM_INFO dma_reg_seq.sv(248) @ 275000: uvm_test_top.env.dma_agnt.sequencer@@tc_seq [TRANSFER_COUNT_REG] READ=0x0000000b
+# UVM_INFO dma_driver.sv(31) @ 275000: uvm_test_top.env.dma_agnt.driver [DRV] REQ received: wr_en=1 rd_en=0 addr=0x0000041c wdata=0xdddddddd
+# UVM_INFO dma_monitor.sv(34) @ 295000: uvm_test_top.env.dma_agnt.monitor [MON] WRITE observed: addr=0x0000041c wdata=0xdddddddd
+# UVM_INFO dma_driver.sv(31) @ 295000: uvm_test_top.env.dma_agnt.driver [DRV] REQ received: wr_en=0 rd_en=1 addr=0x0000041c wdata=0x00000000
+# UVM_INFO dma_monitor.sv(49) @ 315000: uvm_test_top.env.dma_agnt.monitor [MON] READ observed: addr=0x0000041c rdata=0xdddddddd
+# UVM_INFO dma_reg_seq.sv(279) @ 315000: uvm_test_top.env.dma_agnt.sequencer@@desc_seq [DESC_ADDR_REG] DES=0xdddddddd MIRROR=0xdddddddd READ=0xdddddddd
+# UVM_INFO dma_driver.sv(31) @ 315000: uvm_test_top.env.dma_agnt.driver [DRV] REQ received: wr_en=0 rd_en=1 addr=0x00000420 wdata=0x00000000
+# UVM_INFO dma_monitor.sv(49) @ 335000: uvm_test_top.env.dma_agnt.monitor [MON] READ observed: addr=0x00000420 rdata=0x00000000
+# UVM_INFO dma_driver.sv(31) @ 335000: uvm_test_top.env.dma_agnt.driver [DRV] REQ received: wr_en=0 rd_en=1 addr=0x00000420 wdata=0x00000000
+# UVM_INFO dma_monitor.sv(49) @ 355000: uvm_test_top.env.dma_agnt.monitor [MON] READ observed: addr=0x00000420 rdata=0x00000000
+# UVM_INFO dma_reg_seq.sv(323) @ 355000: uvm_test_top.env.dma_agnt.sequencer@@err_seq [ERR_STATUS_REG] DES=0x00000000 MIRROR=0x00000000 READ=0x00000000
+# UVM_INFO dma_driver.sv(31) @ 355000: uvm_test_top.env.dma_agnt.driver [DRV] REQ received: wr_en=1 rd_en=0 addr=0x00000424 wdata=0x0000019e
+# UVM_INFO dma_monitor.sv(34) @ 375000: uvm_test_top.env.dma_agnt.monitor [MON] WRITE observed: addr=0x00000424 wdata=0x0000019e
+# UVM_INFO dma_driver.sv(31) @ 375000: uvm_test_top.env.dma_agnt.driver [DRV] REQ received: wr_en=0 rd_en=1 addr=0x00000424 wdata=0x00000000
+# UVM_INFO dma_monitor.sv(49) @ 395000: uvm_test_top.env.dma_agnt.monitor [MON] READ observed: addr=0x00000424 rdata=0x0000019e
+# UVM_INFO dma_reg_seq.sv(370) @ 395000: uvm_test_top.env.dma_agnt.sequencer@@cfg_seq [CONFIG_REG] DES=0x0000019e MIRROR=0x0000019e READ=0x0000019e
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 395000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :   52
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [CONFIG_REG]     1
+# [CTRL_REG]     1
+# [DESC_ADDR_REG]     1
+# [DRV]    19
+# [ERR_STATUS_REG]     1
+# [EXTRA_INFO_REG]     1
+# [INTR_REG]     1
+# [IO_ADDR_REG]     1
+# [MEM_ADDR_REG]     1
+# [MON]    19
+# [Questa UVM]     2
+# [RNTST]     1
+# [STATUS_REG]     1
+# [TEST_DONE]     1
+# [TRANSFER_COUNT_REG]     1
+# ** Note: $finish    : /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 395 ns  Iteration: 67  Instance: /top
+# Saving coverage database on exit...
+# End time: 16:27:14 on Jan 23,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0

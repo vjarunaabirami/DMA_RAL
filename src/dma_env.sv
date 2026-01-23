@@ -5,6 +5,8 @@ class dma_env extends uvm_env;
   dma_reg_block  regmodel;
   dma_adapter adapter;
   uvm_reg_predictor #(dma_seq_item) predictor;
+  dma_subscriber sub;
+
 
   function new(string name = "dma_env", uvm_component parent);
     super.new(name, parent);
@@ -13,6 +15,7 @@ class dma_env extends uvm_env;
   function void build_phase(uvm_phase phase);
     super.build_phase(phase);
     predictor = uvm_reg_predictor #(dma_seq_item)::type_id::create("predictor", this);
+    sub = dma_subscriber::type_id::create("sub", this);
     dma_agnt = dma_agent::type_id::create("dma_agnt", this);
     regmodel = dma_reg_block::type_id::create("regmodel", this);
     regmodel.build();
@@ -26,6 +29,7 @@ class dma_env extends uvm_env;
     predictor.map     = regmodel.default_map;  
     predictor.adapter = adapter;           
     dma_agnt.monitor.mon_ap.connect(predictor.bus_in);
+    dma_agnt.monitor.mon_ap.connect(sub.monitor_aport);
     regmodel.default_map.set_auto_predict(0);
   endfunction
 

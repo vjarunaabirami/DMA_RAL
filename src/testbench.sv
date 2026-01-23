@@ -1,6 +1,6 @@
 `timescale 1ns/1ps
 
-//`include "design.sv"
+`include "design.sv"
 `include "dma_interface.sv"
 `include "dma_pkg.sv"
 
