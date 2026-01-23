@@ -10,8 +10,8 @@ package dma_pkg;
   `include "dma_monitor.sv"
   `include "dma_agent.sv"
   `include "dma_reg_seq.sv"
+  `include "dma_subscriber.sv"
   `include "dma_env.sv"
   `include "dma_test.sv"
-  `include "dma_subscriber.sv"
 endpackage
 

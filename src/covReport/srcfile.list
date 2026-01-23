@@ -10,5 +10,6 @@ dma_reg.sv
 dma_reg_seq.sv
 dma_seq_item.sv
 dma_sequencer.sv
+dma_subscriber.sv
 dma_test.sv
 testbench.sv
